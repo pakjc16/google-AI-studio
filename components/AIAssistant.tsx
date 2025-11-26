@@ -133,7 +133,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ tenants, payments, units, pro
         <div className="flex items-center gap-2">
           <input 
             type="text" 
-            className="flex-1 border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            className="flex-1 border border-slate-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white text-slate-900 placeholder-slate-400"
             placeholder="AI에게 무엇이든 물어보세요..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -142,7 +142,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ tenants, payments, units, pro
           <button 
             onClick={handleSendMessage}
             disabled={isLoading || !input.trim()}
-            className="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 text-white p-2 rounded-lg transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 text-white p-3 rounded-lg transition-colors"
           >
             <Send size={20} />
           </button>
